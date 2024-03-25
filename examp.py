@@ -14,7 +14,7 @@ def get_min_price(phone,operators):
 	return rsl,min_price
 
 
-# The complexity is o(k*m*n)
+# The complexity is o(m*n)
 
 
 
