@@ -18,6 +18,7 @@ class Trie:
 		root.price = price
 		root.operator = operator
 		root.is_word = True
+
 	def search(self,number):
 		current_price = float('inf')
 		current_operator = None

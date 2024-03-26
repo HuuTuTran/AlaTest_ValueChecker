@@ -1,0 +1,16 @@
+I have 2 solutions for this Exercise:
+
+1. Using 2 iteration (with file solution_1.py)
+>> In this attempt, I used 2 iteration : 1 to loop through operators and 1 to loop through the prefixes of these operators to compare and find the cheapest price in each operators  
+>> This will only work with small amount of data set as the time complexity is O(n * m) with n is the amount of operators and m is the amount of prefixes which is quite slow
+
+2. Using Prefix tree (with file solution_2.py)
+>> In this attempt I used The trie structure which contained 2 processes: add prefixes to tree nodes and find the longest node that is the prefix of the phone number
+>> This will surely be more optimized than the previous one with large dataset. As you traverse down the Trie, you're essentially following the path dictated by the phone number prefix. This can reduce the number of comparisons needed compared to iterating through all prefixes in a basic approach. 
+>> The time complexity will depend on the following factors:
++ Construction:
+Insertion Time: Inserting a prefix-operator-price combination into the trie takes O(n), where n is the length of the prefix, due to iterating over each character in the prefix to build the trie path.
+with m operators, each  having n prefixes with an average length of k, the total insertion time would be about O(m * n * k). but, this is a one-time cost during trie creation and wouldn't be a factor for subsequent searches.
++ Search Time:
+In the best case scenario, if the phone number prefix has a perfect match in the trie, the search complexity is O(n), where n is the length of the phone number prefix. This is because the trie follows the path dictated by the prefix characters, potentially reaching the end (complete prefix) in n steps.
+In the worst case scenario, if the phone number prefix doesn't have a perfect match but shares some initial characters with existing prefixes in the trie, the search might explore multiple branches until a mismatch is found. In this case, the complexity could be O(m), where m is the length of the longest matching prefix (potentially shorter than the phone number prefix).
