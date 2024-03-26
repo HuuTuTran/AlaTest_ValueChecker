@@ -1,5 +1,5 @@
 import unittest
-from examp import get_min_price
+from solution_1 import get_min_price
 class TestCheapestOperator(unittest.TestCase):
     def test_no_matching_prefix(self):
         number = "9876543210"
