@@ -14,3 +14,6 @@ with m operators, each  having n prefixes with an average length of k, the total
 + Search Time:
 In the best case scenario, if the phone number prefix has a perfect match in the trie, the search complexity is O(n), where n is the length of the phone number prefix. This is because the trie follows the path dictated by the prefix characters, potentially reaching the end (complete prefix) in n steps.
 In the worst case scenario, if the phone number prefix doesn't have a perfect match but shares some initial characters with existing prefixes in the trie, the search might explore multiple branches until a mismatch is found. In this case, the complexity could be O(m), where m is the length of the longest matching prefix (potentially shorter than the phone number prefix).
+
+
+this document has been chaned by developer branchs
